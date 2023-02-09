@@ -12,9 +12,9 @@ pipeline {
             sh(script: 'docker images -a')
             sh(script: """
                cd azure-vote/
-               sudo sudo docker images -a
-               sudo docker build -t jenkins-pipeline .
-               sudo docker images -a
+               docker images -a
+               docker build -t jenkins-pipeline .
+               docker images -a
                cd ..
             """)
          }
