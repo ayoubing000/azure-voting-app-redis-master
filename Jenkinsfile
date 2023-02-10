@@ -62,5 +62,12 @@ pipeline {
             }
          }
       }
+      stage('Run Trivy') {
+         steps {
+            sh(script: """
+               trivy akingpwoer/jenkins-course:latest
+            """)
+         }
+      }
    }
 }
